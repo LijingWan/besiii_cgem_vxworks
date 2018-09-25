@@ -1,0 +1,129 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BUILD_PPC604gnu_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_ARCHIVE
+$(PRJ_DIR)/PPC604gnu/UDPrun_test.a
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_CFLAGS
+-g \
+	-mstrict-align \
+	-ansi \
+	-nostdinc \
+	-DRW_MULTI_THREAD \
+	-D_REENTRANT \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-I. \
+	-I$(WIND_BASE)/target/h \
+	-DCPU=PPC604
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_CFLAGS_AS
+-g \
+	-mstrict-align \
+	-ansi \
+	-nostdinc \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-P \
+	-x \
+	assembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h \
+	-DCPU=PPC604
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_CPP
+ccppc -E -P -xc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_PPC604gnu_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_PPC604gnu_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} {$(WIND_BASE)/target/src/} {$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_PPC604gnu_TC
+::tc_PPC604gnu
+<END>
+
+<BEGIN> BUILD__CURRENT
+PPC604gnu
+<END>
+
+<BEGIN> BUILD__LIST
+PPC604gnu
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxApp
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.0
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/UDPrun.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/UDPrun.c_dependencies
+
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/UDPrun.c_objects
+UDPrun.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/UDPrun.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/UDPrun.c
+<END>
+
+<BEGIN> userComments
+<Enter description here>
+<END>
+

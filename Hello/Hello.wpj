@@ -1,0 +1,126 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_ARCHIVE
+$(PRJ_DIR)/PPCEC603gnu/Hello.a
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_CFLAGS
+-g \
+	-mstrict-align \
+	-ansi \
+	-nostdinc \
+	-DRW_MULTI_THREAD \
+	-D_REENTRANT \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-msoft-float \
+	-I. \
+	-I$(WIND_BASE)/target/h \
+	-DCPU=PPCEC603
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_CFLAGS_AS
+-g \
+	-mstrict-align \
+	-ansi \
+	-nostdinc \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-P \
+	-x \
+	assembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h \
+	-DCPU=PPCEC603
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_CPP
+ccppc -E -P -xc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} {$(WIND_BASE)/target/src/} {$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_PPCEC603gnu_TC
+::tc_PPCEC603gnu
+<END>
+
+<BEGIN> BUILD__CURRENT
+PPCEC603gnu
+<END>
+
+<BEGIN> BUILD__LIST
+PPCEC603gnu
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxApp
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.0
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/Hello.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/Hello.c_objects
+Hello.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/Hello.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/Hello.c
+<END>
+
+<BEGIN> userComments
+<Enter description here>
+<END>
+

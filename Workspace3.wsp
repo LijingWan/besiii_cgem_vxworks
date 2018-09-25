@@ -1,0 +1,27 @@
+Document file - DO NOT EDIT
+
+<BEGIN> CORE_INFO_TYPE
+Workspace
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.0
+<END>
+
+<BEGIN> projectList
+$(PRJ_DIR)/Project1/HelloWorld.wpj \
+	$(PRJ_DIR)/UDP_test/UDP_test.wpj \
+	$(PRJ_DIR)/TCP_test/TCP_test.wpj \
+	$(PRJ_DIR)/udp_recv_speed_test/udp_recv_speed_test.wpj \
+	$(PRJ_DIR)/tiger_data_and_check/tiger_data_and_check.wpj \
+	$(PRJ_DIR)/int64_test/int64_test.wpj \
+	$(PRJ_DIR)/tiger_data_recv_test/tiger_data_recv_test.wpj \
+	$(PRJ_DIR)/cgem_vxworks/cgem_vxworks.wpj \
+	$(PRJ_DIR)/udp_send_and_recv/udp_send_and_recv.wpj \
+	$(PRJ_DIR)/besiii_build_test/besiii_build_test.wpj \
+	$(PRJ_DIR)/cgem_vxworks_multifiles/cgem_vxworks_multifiles.wpj \
+	$(PRJ_DIR)/extern_test/extern_test.wpj \
+	$(PRJ_DIR)/UDPrun_test/UDPrun_test.wpj \
+	$(PRJ_DIR)/besiii_cgem_vxworks/besiii_cgem_vxworks.wpj
+<END>
+

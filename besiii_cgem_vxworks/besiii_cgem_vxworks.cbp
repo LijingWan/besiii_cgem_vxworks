@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="besiii_cgem_vxworks" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/besiii_cgem_vxworks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/besiii_cgem_vxworks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="5100_test.h" />
+		<Unit filename="fragheaders.h" />
+		<Unit filename="fw_actions.cpp" />
+		<Unit filename="fw_actions.h" />
+		<Unit filename="fw_configinfo.cpp" />
+		<Unit filename="fw_configinfo.h" />
+		<Unit filename="fw_dcgvas.cpp" />
+		<Unit filename="fw_dcgvas.h" />
+		<Unit filename="fw_define.h" />
+		<Unit filename="fw_filefunc.cpp" />
+		<Unit filename="fw_filefunc.h" />
+		<Unit filename="fw_linkrtns.cpp" />
+		<Unit filename="fw_linkrtns.h" />
+		<Unit filename="fw_roppc.cpp" />
+		<Unit filename="fw_roppc.h" />
+		<Unit filename="fw_runtasks.cpp" />
+		<Unit filename="fw_runtasks.h" />
+		<Unit filename="fw_staterrspt.cpp" />
+		<Unit filename="fw_staterrspt.h" />
+		<Unit filename="fw_tcpfunc.cpp" />
+		<Unit filename="fw_tcpfunc.h" />
+		<Unit filename="fw_udpfunc.cpp" />
+		<Unit filename="fw_udpfunc.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rng_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rng_dma.h" />
+		<Unit filename="sd_cgem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sd_cgem.h" />
+		<Unit filename="sd_cgem_actions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sd_cgem_actions.h" />
+		<Unit filename="sd_cgem_cfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sd_cgem_cfg.h" />
+		<Unit filename="sd_cgem_runtasks.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sd_cgem_runtasks.h" />
+		<Unit filename="sd_emc.cpp" />
+		<Unit filename="sd_emc.h" />
+		<Unit filename="sd_emc_actions.cpp" />
+		<Unit filename="sd_emc_actions.h" />
+		<Unit filename="sd_emc_datapack.cpp" />
+		<Unit filename="sd_emc_datapack.h" />
+		<Unit filename="sd_emc_hw.cpp" />
+		<Unit filename="sd_emc_hw.h" />
+		<Unit filename="sd_emc_runtasks.cpp" />
+		<Unit filename="sd_emc_runtasks.h" />
+		<Unit filename="sd_empty.cpp" />
+		<Unit filename="sd_empty.h" />
+		<Unit filename="sd_empty_actions.cpp" />
+		<Unit filename="sd_empty_actions.h" />
+		<Unit filename="sd_empty_hw.cpp" />
+		<Unit filename="sd_empty_hw.h" />
+		<Unit filename="sd_empty_runtasks.cpp" />
+		<Unit filename="sd_empty_runtasks.h" />
+		<Unit filename="sd_etf.cpp" />
+		<Unit filename="sd_etf.h" />
+		<Unit filename="sd_etf_actions.cpp" />
+		<Unit filename="sd_etf_actions.h" />
+		<Unit filename="sd_etf_datapack.cpp" />
+		<Unit filename="sd_etf_datapack.h" />
+		<Unit filename="sd_etf_fee.cpp" />
+		<Unit filename="sd_etf_fee.h" />
+		<Unit filename="sd_etf_hw.cpp" />
+		<Unit filename="sd_etf_hw.h" />
+		<Unit filename="sd_etf_runtasks.cpp" />
+		<Unit filename="sd_etf_runtasks.h" />
+		<Unit filename="sd_mdc.cpp" />
+		<Unit filename="sd_mdc.h" />
+		<Unit filename="sd_mdc_JTAGSetDR_mqtv10.cpp" />
+		<Unit filename="sd_mdc_JTAGSetData_mqtv10.cpp" />
+		<Unit filename="sd_mdc_JTAGSetIR_mqtv10.cpp" />
+		<Unit filename="sd_mdc_JTAGSoftReset_mqtv10.cpp" />
+		<Unit filename="sd_mdc_JTAGStep_mqtv10.cpp" />
+		<Unit filename="sd_mdc_actions.cpp" />
+		<Unit filename="sd_mdc_actions.h" />
+		<Unit filename="sd_mdc_datapack.cpp" />
+		<Unit filename="sd_mdc_datapack.h" />
+		<Unit filename="sd_mdc_hptdcupload_mqtv10.cpp" />
+		<Unit filename="sd_mdc_hw.cpp" />
+		<Unit filename="sd_mdc_hw.h" />
+		<Unit filename="sd_mdc_mqtv24.h" />
+		<Unit filename="sd_mdc_runtasks.cpp" />
+		<Unit filename="sd_mdc_runtasks.h" />
+		<Unit filename="sd_muon.cpp" />
+		<Unit filename="sd_muon.h" />
+		<Unit filename="sd_muon_actions.cpp" />
+		<Unit filename="sd_muon_actions.h" />
+		<Unit filename="sd_muon_datapack.cpp" />
+		<Unit filename="sd_muon_datapack.h" />
+		<Unit filename="sd_muon_hw.cpp" />
+		<Unit filename="sd_muon_hw.h" />
+		<Unit filename="sd_muon_runtasks.cpp" />
+		<Unit filename="sd_muon_runtasks.h" />
+		<Unit filename="sd_tof.cpp" />
+		<Unit filename="sd_tof.h" />
+		<Unit filename="sd_tof_actions.cpp" />
+		<Unit filename="sd_tof_actions.h" />
+		<Unit filename="sd_tof_datapack.cpp" />
+		<Unit filename="sd_tof_datapack.h" />
+		<Unit filename="sd_tof_fee.cpp" />
+		<Unit filename="sd_tof_fee.h" />
+		<Unit filename="sd_tof_hptdc_config.cpp" />
+		<Unit filename="sd_tof_hptdc_config.h" />
+		<Unit filename="sd_tof_hw.cpp" />
+		<Unit filename="sd_tof_hw.h" />
+		<Unit filename="sd_tof_monitor.cpp" />
+		<Unit filename="sd_tof_monitor.h" />
+		<Unit filename="sd_tof_runtasks.cpp" />
+		<Unit filename="sd_tof_runtasks.h" />
+		<Unit filename="sd_trg.cpp" />
+		<Unit filename="sd_trg.h" />
+		<Unit filename="sd_trg_actions.cpp" />
+		<Unit filename="sd_trg_actions.h" />
+		<Unit filename="sd_trg_datapack.cpp" />
+		<Unit filename="sd_trg_datapack.h" />
+		<Unit filename="sd_trg_hw.cpp" />
+		<Unit filename="sd_trg_hw.h" />
+		<Unit filename="sd_trg_runtasks.cpp" />
+		<Unit filename="sd_trg_runtasks.h" />
+		<Unit filename="sd_zdd.cpp" />
+		<Unit filename="sd_zdd.h" />
+		<Unit filename="sd_zdd_actions.cpp" />
+		<Unit filename="sd_zdd_actions.h" />
+		<Unit filename="sd_zdd_datapack.cpp" />
+		<Unit filename="sd_zdd_datapack.h" />
+		<Unit filename="sd_zdd_hw.cpp" />
+		<Unit filename="sd_zdd_hw.h" />
+		<Unit filename="sd_zdd_runtasks.cpp" />
+		<Unit filename="sd_zdd_runtasks.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

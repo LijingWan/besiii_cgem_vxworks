@@ -1,0 +1,77 @@
+2018-6-26
+besiii软件 应该做的工作
+1、能做的都做了，以后更多时间做别的。
+2、
+2018-6-21 
+这几个命令可以打开ros.
+[run@daqs8 ~]$ source /bes/daq/tdaq/tdaq-01-04-00.slc6/installed/setup.sh
+Setting up TDAQ Common SW release "tdaq-common-01-01-00"
+Setting up DAQ SW release "tdaq-01-04-00-buildlast"
+[run@daqs8 ~]$ play_daq part_slc6_onblade109_all
+
+
+
+2018-6-6
+每个部分先单独运行，再加入框架。
+要包括读数，组装，网络发送这几个任务，函数体可以空，先编译跑通流程。
+cgem_actions.cpp粗略改完，
+下面先把cgem取数，数据组装这几个文件先写好，组装不用检查，直接复制过去。
+1、fw_actions.cpp的修改
+  （1）有关cblt的变量和函数名称不要改，因为以后还要用回cblt，现在只是改函数体里的内容。
+  （2）Fw_dcgvas.cpp ，struct Header * g_pCrateConfigHeader = NULL;
+  （3）函数fw_InitializedLOAD里，收到一串机箱配置:（要统一前后端的这些配置）
+       Header      +      GE_ppc    +     其他插件的结构体
+       crate_len         
+
+
+
+2、fw_configinfo.h
+  有Header，GE_ppc	等结构体的定义。
+  g_nPPCIDOfSRH 对应 g_MUONDBInfo.ppc_header->PPC_id，
+  添加 #define CGEM_PPC	0xF1；这个编号用于区分PPC主机和其他插件。
+
+3、fw_define.h
+   添加  #define	SYSID_CGEM	8
+   修改  #define	MAX_SYS_AMOUNT 	9
+
+
+4、fw_roppc.cpp
+   留意一下 g_nPPCIDOfSRH的设置。g_nCrateID = g_nPPCIDOfSRH ; 现在PPC的IP是192.168.1.201.
+   暂时没有设置IP.  注释掉  if(-1 == ifAddrSet("er0", cLocalPPCIP))
+
+5、fw_runtasks.cpp，数据来源由cblt改为udp收集，改一个函数就可以了。调用udp函数一次，就收到指定的字节数。
+   sysIntDisable(TOF_INT_LEVEL)一开始禁止插件读数的中断
+   sysIntEnable(TOF_INT_LEVEL);
+   计数信号量g_sidInterrupt用于指示插件有无数据，semgive一次加1，说明有数据了，然后调用DMArun用cblt的方式读到g_DmaRng，
+   2018-6-8 把DMArun替换为UDPrun,所以需要实现这个函数，注意g_sidInterrupt，一次最多收几字节g_nMaxCbltBytes的统一设置。
+            在UDPrun里，准备加多一个信号量，用以控制一次读数之后，释放g_sidInterrupt，接着组装，完成后再释放该信号量。那么，在UDPrun中应该使用2个缓冲区来确保UDP接收不因组装的流程而间断。一              个缓冲满了通知组装任务来读，然后又在第2个缓冲接收UDP数据。
+           （写一个测试函数）开2个任务：1，udp不间断接收的任务。2，把udp数据复制过来并显示的任务。设置信号量，确保任务先后的正确，资源互斥访问。最好不要因为任务2而暂停任务1的运行（udp有多个接收数据的缓冲区？）。
+   2018-6-11 am 继续写UDPrun的测试函数。
+   2018-6-14 am UDPrun函数已加入，继续改后面的datapack。
+
+6、sd_cgem_runtasks.c
+   在这个文件里：
+   函数cgemDataPack()有一个循环。等待和接收cblt的消息，收到消息说明从cblt取得了数据，
+
+
+7、模拟后台和VxWorks连接。
+   
+8、这个版本的软件用tcp_server.c读取并发送配置命令给VxWorks，用UDPser.py模拟命令处理并echo，可以用ros.c模拟后台发命令给前端的VxWorks。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
